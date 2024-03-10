@@ -1,0 +1,240 @@
+@use "variables" as *;
+@use "typography";
+@use "breakpoints" as *;
+@use "functions" as *;
+
+// Mobile First
+body {
+  background-color: $pale-blue;
+  font-family: $font-stack;
+  font-size: rem(18);
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Add this line */
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.card {
+  max-width: rem(375);
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: rem(32);
+  margin-top: rem(8);
+  @include breakpoint(medium) {
+    max-width: rem(736);
+    flex-direction: row;
+    border-radius: rem(16) rem(64) rem(16) rem(64);
+    margin-top: revert;
+  }
+
+  &__result {
+    background: $card-result-background;
+    box-shadow: 0px 30px 60px 0px $box-shadow;
+    padding: rem(24) rem(57) rem(40) rem(58);
+    border-radius: 0 0 rem(32) rem(32);
+    @include breakpoint(medium) {
+      border-radius: 0 0 0 rem(32);
+      padding: rem(38) rem(54) rem(55) rem(54);
+    }
+  }
+}
+
+.result__title {
+  color: $light-lavender;
+  font-weight: 700;
+
+  @include breakpoint(medium) {
+    font-size: rem(24);
+  }
+}
+
+.result__percentage {
+  margin-top: rem(24);
+  display: grid;
+  place-content: center;
+  width: rem(140);
+  height: rem(140);
+  border-radius: 50%;
+  background: $card-percentage-background;
+  margin-inline: auto;
+  @include breakpoint(medium) {
+    margin-top: rem(35);
+    width: rem(200);
+    height: rem(200);
+  }
+}
+
+.percentage__myresult {
+  color: $white;
+  font-size: rem(56);
+  font-weight: 800;
+  line-height: 1.28;
+
+  @include breakpoint(medium) {
+    font-size: rem(72);
+    line-height: 1;
+  }
+}
+
+.percentage__total {
+  color: $light-lavender;
+  font-weight: 700;
+}
+
+.result__reaction {
+  margin-top: rem(24);
+  color: $white;
+  font-size: rem(24);
+  @include breakpoint(medium) {
+    margin-top: rem(28);
+    font-size: rem(32);
+    font-weight: 700;
+  }
+}
+
+.result__description {
+  margin-top: rem(8);
+  color: $light-lavender;
+  font-weight: 500;
+  @include breakpoint(medium) {
+    margin-top: rem(14);
+  }
+}
+
+.card__summary {
+  padding: rem(24) rem(30) rem(30) rem(30);
+  display: grid;
+  @include breakpoint(medium) {
+    padding: rem(38) rem(40) rem(46) rem(40);
+  }
+}
+
+.summary__title {
+  text-align: left;
+  color: $dark-gray-blue;
+  font-size: rem(18);
+
+  @include breakpoint(medium) {
+    font-size: rem(24);
+  }
+}
+
+.summary__list {
+  margin-top: rem(24);
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+  @include breakpoint(medium) {
+    margin-top: rem(28);
+  }
+}
+
+.list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(16) rem(18);
+  border-radius: rem(12);
+  @include breakpoint(medium) {
+    padding: rem(16);
+  }
+
+  &--reaction {
+    background: $reaction-background;
+  }
+  &--memory {
+    background: $memory-background;
+  }
+  &--verbal {
+    background: $verbal-background;
+  }
+  &--visual {
+    background: $visual-background;
+  }
+}
+
+.item__logo-name {
+  display: flex;
+  gap: rem(12);
+  align-items: center;
+  font-size: rem(16);
+  @include breakpoint(medium) {
+    font-size: rem(18);
+  }
+}
+
+.logo-name {
+  &__reaction {
+    color: $light-red;
+  }
+  &__memory {
+    color: $orangey-yellow;
+  }
+  &__verbal {
+    color: $green-teal;
+  }
+  &__visual {
+    color: $cobalt-blue;
+  }
+}
+
+.item__percentage {
+  display: flex;
+  gap: rem(8);
+  align-items: center;
+  font-size: rem(16);
+  font-weight: 700;
+  @include breakpoint(medium) {
+    font-size: rem(18);
+  }
+}
+
+.percentage__my-score {
+  color: $dark-gray-blue;
+}
+
+.summary__link {
+  margin-top: rem(8);
+  background-color: $dark-gray-blue;
+  padding: rem(17) rem(120);
+  color: $white;
+  text-decoration: none;
+  border: none;
+  border-radius: rem(128);
+  font-weight: 700;
+  @include breakpoint(medium) {
+    &:hover,
+    &:focus {
+      background: $hover-background;
+    }
+    margin-top: rem(25);
+  }
+}
+
+/* Footer */
+.footer {
+  // margin-top: auto;
+}
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: $cobalt-blue;
+  font-weight: 600;
+}
