@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        <div class="card">
+          <div class="card__result">
+            <p class="result__title">Your Result</p>
+            <div class="result__percentage">
+              <p class="percentage__myresult">76</p>
+              <p class="percentage__total">of 100</p>
+            </div>
+            <p class="result__reaction">Great</p>
+            <p class="result__description">
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
+          <div class="card__summary">
+            <h1 class="summary__title">Summary</h1>
+            <ul class="summary__list">
+              <li class="list__item list__item--reaction">
+                <div class="item__logo-name">
+                  <img src="assets/images/icon-reaction.svg" alt="" />
+                  <p class="logo-name__reaction">Reaction</p>
+                </div>
+                <div class="item__percentage">
+                  <p class="percentage__my-score">80</p>
+                  <p class="percentage__total">/ 100</p>
+                </div>
+              </li>
+              <li class="list__item list__item--memory">
+                <div class="item__logo-name">
+                  <img src="assets/images/icon-memory.svg" alt="" />
+                  <p class="logo-name__memory">Memory</p>
+                </div>
+                <div class="item__percentage">
+                  <p class="percentage__my-score">92</p>
+                  <p class="percentage__total">/ 100</p>
+                </div>
+              </li>
+              <li class="list__item list__item--verbal">
+                <div class="item__logo-name">
+                  <img src="assets/images/icon-verbal.svg" alt="" />
+                  <p class="logo-name__verbal">Verbal</p>
+                </div>
+                <div class="item__percentage">
+                  <p class="percentage__my-score">61</p>
+                  <p class="percentage__total">/ 100</p>
+                </div>
+              </li>
+              <li class="list__item list__item--visual">
+                <div class="item__logo-name">
+                  <img src="assets/images/icon-visual.svg" alt="" />
+                  <p class="logo-name__visual">Visual</p>
+                </div>
+                <div class="item__percentage">
+                  <p class="percentage__my-score">72</p>
+                  <p class="percentage__total">/ 100</p>
+                </div>
+              </li>
+            </ul>
+            <a href="#" class="summary__link"> Continue </a>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Kamran Kiani</a>.
+        </p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
